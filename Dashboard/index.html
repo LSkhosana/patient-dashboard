@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body id="body">
+
+    <div class="nav-container">
+        <div class="nav-right">
+            <img src="./assets/logo.png" alt="Logo" class="logo-image">  
+        </div>
+        <nav class="links">
+            <ul class="nav-links">
+                <li><a href="#home"><img src="./assets/home.png" alt="Overview Icon">Overview</a></li>
+                <div class="bg-color">
+                    <a href="#about"><img src="./assets/people.png" alt="Patients Icon">Patients</a>
+                </div>                
+                <li><a href="#services"><img src="./assets/Schedule.png" alt="Schedule Icon">Schedule</a></li>
+                <li><a href="#contact"><img src="./assets/messages.png" alt="Messages Icon">Messages</a></li>
+                <li><a href="#transactions"><img src="./assets/credit-card.png" alt="Transactions Icon">Transactions</a></li>
+
+            </ul>
+        </nav>
+        <div class="nav-left">
+            <img src="./assets/doctor.png" alt="doctor" class="doc">
+            <div class="doc-info">
+                <strong><p>Dr. Jose Simmons</p></strong>
+                <p>General Practitioner</p>
+            </div>
+            <div class="settings">
+                <img src="./assets/settings.png" alt="settings" style="width: 19px; height: 20px;">
+                <img src="./assets/dots-v.png" alt="dots" style="width: 3.71px; height: 18px; margin-left: 12px;">
+
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="patients-list-container">
+        <div class="h-1">
+            <h1>Patients</h1>
+            <img src="./assets/search.png" alt="search">
+        </div>
+        <div class="patients-list">
+            <!-- Patient list inserted here -->
+        </div>
+    </div>
+    
+    
+    <section id="chart-border">
+        <h1 id="head">Diagnosis History</h1>
+        <div class="chart-border">
+            <div class="chart">
+                <div class="bp-heading">
+                    <h1>Blood Pressure</h1>
+                    <p>Last 6 months</p>
+                    <img style="width: 10.6px; height: 6px; margin-top: 32px; margin-left: 16px;"src="assets/arrow.png" alt="arrow">
+                </div>
+                
+                <div class="blood-chart">
+                    <canvas id="bloodPressureChart"></canvas>
+                    <div class="chart-data">
+                        <p style="font-size: 14px; display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 10px; height: 10px; background-color: #E66FD2; border-radius: 50%; margin-right: 5px;"></span>
+                            Systolic
+                        </p>
+                        <p id="blood-pressure-value" style="font-size: 22px; font-weight: bold; margin-top: 8px;">160</p>
+                        <div class="bp-img">
+                            <img style="width: 10px; height: 5.48px;" src="./assets/up.png" alt="Heart Rate Icon">
+                            <p id="blood-pressure-levels" style="font-size: 14px; margin-top: 8px; white-space: nowrap;" >Higher than avarage</p>
+                        </div>
+                        <p style="font-size: 14px; margin-top: 33px; display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 10px; height: 10px; background-color: #8C6FE6; border-radius: 50%; margin-right: 5px;"></span>
+                            Diastolic
+                        </p>
+                        <p id="diastolic-value" style="font-size: 22px; font-weight: bold; margin-top: 8px;">78</p>
+                        <div class="bp-img">
+                            <img style="width: 10px; height: 5.48px;" src="./assets/down.png" alt="Heart Rate Icon">
+                            <p id="diastolic-levels" style="font-size: 14px; margin-top: 8px; white-space: nowrap;">Lower than avarage</p>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="all-cards">
+            <div class="card-container">
+                <div class="card1">
+                    <img src="./assets/lungs.png" alt="Lungs Icon">
+                    <div class="card-values">
+                        <p>Respiratory Rate</p>
+                        <h1 id="respiratory-rate"></h1>  
+                        <p id="respiratory-rate-levels"></p>
+                    </div> 
+                </div>
+            </div>
+        
+            <div class="card-container">
+                <div class="card2">
+                    <img src="./assets/temp.png" alt="Temperature Icon">
+                    <div class="card-values">
+                        <p>Temperature</p>
+                        <h1 id="temperature"></h1> 
+                        <p id="temperature-levels"></p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card-container">
+                <div class="card3">
+                    <img src="./assets/heart.png" alt="Heart Icon">
+                    <div class="card-values">
+                        <p>Heart Rate</p>
+                        <h1 id="heart-rate"></h1>
+                        <div class="rate-img">
+                            <img style="width: 10px; height: 5.48px; margin-top: 6px;" src="./assets/down.png" alt="Heart Rate Icon">
+                            <p id="heart-rate-levels"></p>  
+                        </div>  
+                </div>
+            </div>
+        </div>
+        
+
+            
+        </div>
+    </section>
+
+    <section>
+    <div id="patient-info">
+        <img id="profile-picture" src="" alt="Profile Picture">
+        <h1 id="patient-name"></h1>
+        <p id="patient-date-of-birth"></p>
+        <p id="patient-gender"></p>
+        <p id="contact-info"></p>
+        <p id="emergency-contact"></p>
+        <p id="insurance"></p>
+        <div class="btn1">
+            <button id="btn1">Show All Information</button>
+        </div>
+    </div> 
+    </section>
+
+    <div class="table-container">
+        <div class="diagnostics">
+            <h1>Diagnostic List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Diagnostic data inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+
+    <div class="lab">
+        <h1>Lab Results</h1>
+        <div class="lab-results">
+            <div class="r-1">
+                <p id="result-1"></p>
+                <img src="./assets/download.png" alt="download">
+            </div>
+            <div class="r-2">
+                <p id="result-2"></p>
+                <img src="./assets/download.png" alt="download">
+            </div>
+            <div class="r-1">
+                <p id="result-3"></p>
+                <img src="./assets/download.png" alt="download">
+            </div>
+            <div class="r-1">
+                <p id="result-4"></p>
+                <img src="./assets/download.png" alt="download">
+            </div>
+            <div class="r-1">
+                <p id="result-5">Urine Test</p> <!--urine test not in the api-->
+                <img src="./assets/download.png" alt="download">
+            </div>
+
+        </div>
+    
+    </div>
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script> 
+    <script src="patientList.js"></script>
+</body>
+</html>
